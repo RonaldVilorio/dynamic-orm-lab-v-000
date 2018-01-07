@@ -55,7 +55,7 @@ class InteractiveRecord
 
     attribute.map do |property,value|
       sql = "SELECT * FROM #{table_name} WHERE #{property} = ?"
-      DB[:conn].execute(sql,value)
+      DB[:conn].execute(sql,value).first
     end
 
   end
