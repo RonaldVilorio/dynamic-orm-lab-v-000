@@ -14,7 +14,7 @@ class InteractiveRecord
     table_info.each do |row|
       binding.pry
     end
-    binding.pry
+    
   end
 
 end
