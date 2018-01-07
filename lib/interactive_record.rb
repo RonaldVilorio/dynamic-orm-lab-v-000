@@ -52,7 +52,7 @@ class InteractiveRecord
   end
   def self.find_by(attribute={})
     sql = "SELECT * FROM #{table_name} WHERE name = ?"
-    
+
     attribute.each do |property,value|
       self.send("#{property}=",value)
     end
