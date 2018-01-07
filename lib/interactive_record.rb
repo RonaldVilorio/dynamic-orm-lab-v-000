@@ -4,7 +4,7 @@ require 'pry'
 
 class InteractiveRecord
   def self.table_name
-    self.to_s.downcase
+    self.to_s.downcase.pluralize
     binding.pry
   end
 
