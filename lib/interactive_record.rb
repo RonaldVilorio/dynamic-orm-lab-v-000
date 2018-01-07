@@ -54,7 +54,7 @@ class InteractiveRecord
     binding.pry
     sql = "SELECT * FROM #{table_name} WHERE #{} = ?"
     attribute.map do |property,value|
-      "#{property}"
+      "#{property}".join("")
       # self.send("#{property}=",value)
     end
     DB[:conn].execute(sql,attribute[:name])
