@@ -23,7 +23,9 @@ class InteractiveRecord
       self.send("#{property}=",value)
     end
   end
+
   def table_name_for_insert
+    
   end
 
 
