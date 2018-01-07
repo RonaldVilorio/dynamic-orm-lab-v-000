@@ -15,7 +15,9 @@ class InteractiveRecord
       column_names << row["name"]
     end
     column_names.compact
-
   end
+  def initialize()
+  end
+
 
 end
