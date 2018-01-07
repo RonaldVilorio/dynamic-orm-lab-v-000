@@ -52,8 +52,9 @@ class InteractiveRecord
   end
   def self.find_by(attribute={})
     binding.pry
-    sql = "SELECT * FROM #{table_name} WHERE #{} = ?"
+    
     attribute.map do |property,value|
+      sql = "SELECT * FROM #{table_name} WHERE #{property} = ?"
       "#{property}"
       # self.send("#{property}=",value)
     end
