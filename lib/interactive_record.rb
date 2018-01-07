@@ -54,6 +54,7 @@ class InteractiveRecord
     # binding.pry
 
     attribute.map do |property,value|
+      binding.pry
       sql = "SELECT * FROM #{table_name} WHERE #{property} = ?"
       DB[:conn].execute(sql,attribute[value])
     end
