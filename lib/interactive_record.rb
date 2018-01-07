@@ -28,7 +28,7 @@ class InteractiveRecord
     self.class.table_name
   end
 
-  def col_for_insert
+  def col_names_for_insert
     values = []
 
   end
