@@ -51,13 +51,10 @@ class InteractiveRecord
     DB[:conn].execute(sql,name)
   end
   def self.find_by(attribute={})
-    # binding.pry
-
     attribute.map do |property,value|
       sql = "SELECT * FROM #{table_name} WHERE #{property} = ?"
       DB[:conn].execute(sql,value).first
     end
-
   end
 
 end
