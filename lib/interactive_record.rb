@@ -2,7 +2,7 @@ require_relative "../config/environment.rb"
 require 'active_support/inflector'
 require 'pry'
 
-# attr_accessor :id,:name,:grade
+attr_accessor :id,:name,:grade
 
 class InteractiveRecord
   def self.table_name
